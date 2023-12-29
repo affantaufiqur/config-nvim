@@ -19,4 +19,35 @@ return {
       vim.cmd([[colorscheme sweet-fusion]])
     end,
   },
+  {
+    "ramojus/mellifluous.nvim",
+    config = function()
+      require("mellifluous").setup({
+        dim_inactive = false,
+        color_set = "tender",
+        styles = {
+          transparent_background = {
+            enabled = true,
+            floating_windows = true,
+            telescope = true,
+            file_tree = true,
+            cursor_line = true,
+            status_line = false,
+          },
+        },
+        plugins = {
+          cmp = true,
+          indent_blankline = true,
+          neo_tree = {
+            enabled = true,
+          },
+          telescope = {
+            enabled = true,
+            nvchad_like = true,
+          },
+        },
+      }) -- optional, see configuration section.
+      vim.cmd("colorscheme mellifluous")
+    end,
+  },
 }

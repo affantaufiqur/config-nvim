@@ -1,21 +1,17 @@
 return {
-  "ramojus/mellifluous.nvim",
+  "olivercederborg/poimandres.nvim",
+  lazy = false,
+  priority = 1000,
   config = function()
-    require("mellifluous").setup({
-      dim_inactive = false,
-      color_set = "tender",
-      plugins = {
-        cmp = true,
-        indent_blankline = true,
-        neo_tree = {
-          enabled = true,
-        },
-        telescope = {
-          enabled = true,
-          nvchad_like = true,
-        },
-      },
-    }) -- optional, see configuration section.
-    vim.cmd("colorscheme mellifluous")
+    require("poimandres").setup({
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+      --
+      disable_background = true,
+    })
+    vim.cmd([[colorscheme poimandres]])
   end,
+
+  -- optionally set the colorscheme within lazy config
 }
