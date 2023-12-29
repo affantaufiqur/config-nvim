@@ -1,18 +1,21 @@
 return {
-  -- "aktersnurra/no-clown-fiesta.nvim",
-  -- config = function()
-  --   require("no-clown-fiesta")
-  --   vim.cmd([[colorscheme no-clown-fiesta]])
-  -- end,
-  "DanielEliasib/sweet-fusion",
-  name = "sweet-fusion",
-  priority = 1000,
-  opts = {
-    -- Set transparent background
-    transparency = true,
-    dim_inactive = true,
-  },
+  "ramojus/mellifluous.nvim",
   config = function()
-    vim.cmd([[colorscheme sweet-fusion]])
+    require("mellifluous").setup({
+      dim_inactive = false,
+      color_set = "tender",
+      plugins = {
+        cmp = true,
+        indent_blankline = true,
+        neo_tree = {
+          enabled = true,
+        },
+        telescope = {
+          enabled = true,
+          nvchad_like = true,
+        },
+      },
+    }) -- optional, see configuration section.
+    vim.cmd("colorscheme mellifluous")
   end,
 }
