@@ -1,17 +1,14 @@
 return {
-  "olivercederborg/poimandres.nvim",
+  "scottmckendry/cyberdream.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("poimandres").setup({
-      -- leave this setup function empty for default config
-      -- or refer to the configuration section
-      -- for configuration options
-      --
-      disable_background = true,
+    require("cyberdream").setup({
+      transparent = true,
+      italic_comments = true,
+      hide_fillchars = true,
+      borderless_telescope = false,
     })
-    vim.cmd([[colorscheme poimandres]])
+    vim.cmd("colorscheme cyberdream")
   end,
-
-  -- optionally set the colorscheme within lazy config
 }

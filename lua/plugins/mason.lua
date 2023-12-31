@@ -12,7 +12,6 @@ return {
       "json-lsp",
       "lua-language-server",
       "markdown-toc",
-      "prettier",
       "prettierd",
       "svelte-language-server",
       "tailwindcss-language-server",
