@@ -13,6 +13,7 @@ return {
       "lua-language-server",
       "markdown-toc",
       "prettierd",
+      "prettier",
       "svelte-language-server",
       "tailwindcss-language-server",
       "typescript-language-server",
