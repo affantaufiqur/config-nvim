@@ -2,12 +2,13 @@ return {
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
+      -- prettierd sometimes fails to format, so can use normal prettier instead
       lua = { "stylua" },
-      javascript = { "prettierd", "prettier", "eslint" },
-      javascriptreact = { "prettierd", "prettier", "eslint" },
-      typescriptreact = { "prettierd", "prettier", "eslint" },
-      typescript = { "prettierd", "prettier", "eslint" },
-      svelte = { "prettierd", "prettier", "eslint" },
+      javascript = { "prettierd", "prettier" },
+      javascriptreact = { "prettier" },
+      typescriptreact = { "prettierd" },
+      typescript = { "prettierd" },
+      svelte = { "prettierd", "prettier" },
     },
   },
 }
