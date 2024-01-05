@@ -1,14 +1,14 @@
 return {
-  "scottmckendry/cyberdream.nvim",
+  "zootedb0t/citruszest.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("cyberdream").setup({
-      transparent = true,
-      italic_comments = true,
-      hide_fillchars = true,
-      borderless_telescope = true,
+    require("citruszest").setup({
+      option = {
+        transparent = true,
+        italic = true,
+      },
     })
-    vim.cmd("colorscheme cyberdream")
+    vim.cmd([[colorscheme citruszest]])
   end,
 }
