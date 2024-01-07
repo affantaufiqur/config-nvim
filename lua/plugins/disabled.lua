@@ -13,8 +13,4 @@ return {
   --   "MunifTanjim/nui.nvim",
   --   enabled = false,
   -- },
-  {
-    "folke/noice.nvim",
-    enabled = false,
-  },
 }
