@@ -1,14 +1,8 @@
 return {
-  "zootedb0t/citruszest.nvim",
+  "nyoom-engineering/oxocarbon.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("citruszest").setup({
-      option = {
-        transparent = true,
-        italic = true,
-      },
-    })
-    vim.cmd([[colorscheme citruszest]])
+    vim.cmd("colorscheme oxocarbon")
   end,
 }
