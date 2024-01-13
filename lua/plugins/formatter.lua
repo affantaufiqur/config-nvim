@@ -4,11 +4,15 @@ return {
     formatters_by_ft = {
       -- prettierd sometimes fails to format, so can use normal prettier instead
       lua = { "stylua" },
-      javascript = { "prettierd", "prettier" },
+      javascript = { "prettier" },
       javascriptreact = { "prettier" },
-      typescriptreact = { "prettierd" },
-      typescript = { "prettierd" },
-      svelte = { "prettierd", "prettier" },
+      typescriptreact = { "prettier" },
+      typescript = { "prettier" },
+      svelte = { "prettier" },
+    },
+    format_on_save = {
+      lsp_fallback = true,
+      timeout_ms = 500,
     },
   },
 }
