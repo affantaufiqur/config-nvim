@@ -8,6 +8,10 @@ return {
     "stevearc/dressing.nvim",
     enabled = false,
   },
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
   -- {
   -- required by neo-tree
   --   "MunifTanjim/nui.nvim",
