@@ -1,9 +1,9 @@
 return {
-  "mellow-theme/mellow.nvim",
+  "shaunsingh/nord.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.mellow_transparent = true
-    vim.cmd([[colorscheme mellow]])
+    vim.g.nord_disable_background = true
+    vim.cmd([[colorscheme nord]])
   end,
 }

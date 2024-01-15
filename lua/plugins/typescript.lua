@@ -1,3 +1,6 @@
+-- to revert to tsserver
+-- install tsserver from mason
+-- and install from lazy extras
 return {
   "pmizio/typescript-tools.nvim",
   event = "BufReadPre",
