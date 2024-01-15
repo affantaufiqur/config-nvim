@@ -10,6 +10,7 @@ return {
       lualine_x = {
         {
           "branch",
+          icons_enabled = false,
         },
       },
       lualine_a = {
