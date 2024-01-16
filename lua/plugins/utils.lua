@@ -18,4 +18,7 @@ return {
       require("treesj").setup({})
     end,
   },
+  {
+    "tpope/vim-fugitive",
+  },
 }
