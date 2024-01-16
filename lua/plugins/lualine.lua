@@ -9,7 +9,7 @@ return {
     sections = {
       lualine_x = {
         {
-          "branch",
+          "%=%m %f",
         },
       },
       lualine_a = {
@@ -23,6 +23,22 @@ return {
           symbols = {
             alternate_file = "",
           },
+        },
+      },
+      lualine_c = {
+        {
+          "diagnostics",
+          symbols = {
+            error = " ",
+            warn = " ",
+            info = " ",
+            hint = " ",
+          },
+        },
+        {
+          "branch",
+          icons_enabled = true,
+          icon = "",
         },
       },
     },
