@@ -16,7 +16,6 @@ return {
       "prettier",
       "svelte-language-server",
       "tailwindcss-language-server",
-      "typescript-language-server",
     },
   },
 }

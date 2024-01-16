@@ -1,8 +1,9 @@
 return {
-  "nyoom-engineering/oxocarbon.nvim",
+  "shaunsingh/nord.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme oxocarbon")
+    vim.g.nord_disable_background = true
+    vim.cmd([[colorscheme nord]])
   end,
 }
