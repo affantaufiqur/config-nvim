@@ -10,7 +10,7 @@ return {
     },
   },
   {
-    -- splitting and joing syntax
+    -- splitting and joining syntax
     "Wansmer/treesj",
     keys = { "<space>m" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
@@ -19,4 +19,12 @@ return {
     end,
   },
   { "tpope/vim-fugitive" },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }
