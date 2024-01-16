@@ -1,9 +1,9 @@
 return {
-  "kvrohit/substrata.nvim",
+  "shaunsingh/nord.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.substrata_transparent = true
-    vim.cmd([[colorscheme substrata]])
+    vim.g.nord_disable_background = true
+    vim.cmd([[colorscheme nord]])
   end,
 }
