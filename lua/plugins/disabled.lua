@@ -12,6 +12,10 @@ return {
     "akinsho/bufferline.nvim",
     enabled = false,
   },
+  {
+    "folke/noice.nvim",
+    enabled = false,
+  },
   -- {
   -- required by neo-tree
   --   "MunifTanjim/nui.nvim",
