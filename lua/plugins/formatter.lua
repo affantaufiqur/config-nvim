@@ -9,8 +9,5 @@ return {
       typescript = { "prettier" },
       svelte = { "prettier" },
     },
-    format_on_save = {
-      timeout_ms = 500,
-    },
   },
 }
