@@ -1,10 +1,10 @@
 return {
-  "shaunsingh/nord.nvim",
+  "kvrohit/rasmus.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.nord_disable_background = true
-    vim.g.nord_borders = true
-    vim.cmd([[colorscheme nord]])
+    vim.g.rasmus_transparent = true
+    vim.g.rasmus_variant = "monochrome"
+    vim.cmd([[colorscheme rasmus]])
   end,
 }
