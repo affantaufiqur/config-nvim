@@ -1,9 +1,11 @@
 return {
-  "shaunsingh/nord.nvim",
+  "craftzdog/solarized-osaka.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.nord_disable_background = true
-    vim.cmd([[colorscheme nord]])
+    require("solarized-osaka").setup({
+      transparent = true,
+    })
+    vim.cmd("colorscheme solarized-osaka")
   end,
 }
