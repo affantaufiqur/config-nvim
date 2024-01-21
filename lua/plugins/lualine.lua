@@ -1,15 +1,17 @@
+local Util = require("lazyvim.util")
+
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
     options = {
       icons_enabled = false,
       component_separators = "|",
-      section_separators = "",
+      section_separators = "::",
     },
     sections = {
       lualine_x = {
         {
-          "%=%m %f",
+          Util.lualine.pretty_path(),
         },
       },
       lualine_a = {
