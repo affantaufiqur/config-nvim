@@ -1,7 +1,6 @@
 return {
   "LazyVim/LazyVim",
   opts = {
-    colorscheme = "nord",
     icons = {
       diagnostics = {
         Error = "E ",
