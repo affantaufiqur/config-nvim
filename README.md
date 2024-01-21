@@ -1,3 +1,3 @@
 Personal neovim config, using [LazyVim](https://github.com/LazyVim/LazyVim) as the base.
 
-![screenshot](./public/nvim.png)
+![screenshot](./public/vim.png)
