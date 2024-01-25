@@ -16,6 +16,11 @@ return {
     "folke/noice.nvim",
     enabled = false,
   },
+  {
+
+    "ggandor/flit.nvim",
+    enabled = false,
+  },
   -- {
   -- required by neo-tree
   --   "MunifTanjim/nui.nvim",
