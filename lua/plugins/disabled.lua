@@ -21,6 +21,14 @@ return {
     "ggandor/flit.nvim",
     enabled = false,
   },
+  {
+    "echasnovski/mini.surround",
+    enabled = false,
+  },
+  {
+    "catppuccin/nvim",
+    enabled = false,
+  },
   -- {
   -- required by neo-tree
   --   "MunifTanjim/nui.nvim",

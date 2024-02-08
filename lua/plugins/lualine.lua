@@ -21,10 +21,7 @@ return {
       },
       lualine_b = {
         {
-          "buffers",
-          symbols = {
-            alternate_file = "",
-          },
+          "filename",
         },
       },
       lualine_c = {

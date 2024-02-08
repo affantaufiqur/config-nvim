@@ -1,11 +1,11 @@
 return {
-  "craftzdog/solarized-osaka.nvim",
+  "olivercederborg/poimandres.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("solarized-osaka").setup({
-      transparent = true,
+    require("poimandres").setup({
+      disable_background = true,
     })
-    vim.cmd("colorscheme solarized-osaka")
+    vim.cmd([[colorscheme poimandres]])
   end,
 }
