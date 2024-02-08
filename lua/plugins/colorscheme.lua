@@ -1,11 +1,18 @@
 return {
-  "olivercederborg/poimandres.nvim",
+  "ramojus/mellifluous.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("poimandres").setup({
-      disable_background = true,
+    require("mellifluous").setup({
+      transparent_background = {
+        enabled = true,
+        floating_windows = true,
+        telescope = true,
+        file_tree = true,
+        cursor_line = true,
+        status_line = false,
+      },
     })
-    vim.cmd([[colorscheme poimandres]])
+    vim.cmd([[colorscheme mellifluous]])
   end,
 }
