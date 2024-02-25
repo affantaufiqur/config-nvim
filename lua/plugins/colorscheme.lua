@@ -1,11 +1,13 @@
 return {
-  "olivercederborg/poimandres.nvim",
+  "crispybaccoon/evergarden",
   lazy = false,
   priority = 1000,
-  config = function()
-    require("poimandres").setup({
-      disable_background = true,
-    })
-    vim.cmd([[colorscheme poimandres]])
+  opts = {
+    transparent_background = true,
+    contrast_dark = "hard", -- 'hard'|'medium'|'soft'
+  },
+  config = function(_, opts)
+    require("evergarden").setup(opts)
+    vim.cmd([[colorscheme evergarden]])
   end,
 }
