@@ -1,18 +1,12 @@
 return {
-  "ramojus/mellifluous.nvim",
+  "polirritmico/monokai-nightasty.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("mellifluous").setup({
-      transparent_background = {
-        enabled = true,
-        floating_windows = true,
-        telescope = true,
-        file_tree = true,
-        cursor_line = true,
-        status_line = false,
-      },
+    require("monokai-nightasty").setup({
+      dark_style_background = "transparent",
     })
-    vim.cmd([[colorscheme mellifluous]])
+    vim.opt.background = "dark"
+    vim.cmd([[colorscheme monokai-nightasty]])
   end,
 }
