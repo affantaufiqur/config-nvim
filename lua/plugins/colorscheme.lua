@@ -1,12 +1,10 @@
 return {
-  "polirritmico/monokai-nightasty.nvim",
+  "mcchrish/zenbones.nvim",
+  dependencies = { "rktjmp/lush.nvim" },
   lazy = false,
   priority = 1000,
   config = function()
-    require("monokai-nightasty").setup({
-      dark_style_background = "transparent",
-    })
-    vim.opt.background = "dark"
-    vim.cmd([[colorscheme monokai-nightasty]])
+    vim.g.zenbones_darkness = "warm"
+    vim.cmd([[colorscheme zenwritten]])
   end,
 }
