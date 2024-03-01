@@ -4,5 +4,8 @@ return {
     window = {
       position = "current",
     },
+    filesystem = {
+      use_libuv_file_watcher = false,
+    },
   },
 }
