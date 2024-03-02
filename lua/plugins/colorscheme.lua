@@ -1,13 +1,8 @@
 return {
-  "crispybaccoon/evergarden",
-  lazy = false,
+  "mcchrish/zenbones.nvim",
   priority = 1000,
-  opts = {
-    transparent_background = true,
-    contrast_dark = "hard", -- 'hard'|'medium'|'soft'
-  },
-  config = function(_, opts)
-    require("evergarden").setup(opts)
-    vim.cmd([[colorscheme evergarden]])
+  config = function()
+    vim.g.zenbones_compat = 1
+    vim.cmd([[colorscheme zenbones]])
   end,
 }
