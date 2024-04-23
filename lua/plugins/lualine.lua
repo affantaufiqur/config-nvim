@@ -21,10 +21,15 @@ return {
       },
       lualine_b = {
         {
-          "filename",
+          "branch",
+          icons_enabled = true,
+          icon = "",
         },
       },
       lualine_c = {
+        {
+          "filename",
+        },
         {
           "diagnostics",
           symbols = {
@@ -33,11 +38,6 @@ return {
             info = "I ",
             hint = "H ",
           },
-        },
-        {
-          "branch",
-          icons_enabled = true,
-          icon = "",
         },
       },
     },

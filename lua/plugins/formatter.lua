@@ -8,7 +8,7 @@ return {
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
       typescript = { "prettier" },
-      svelte = { "prettierd", "prettier" },
+      svelte = { "prettier" },
     },
   },
 }
