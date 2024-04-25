@@ -1,10 +1,7 @@
 return {
-  "rebelot/kanagawa.nvim",
+  "savq/melange-nvim",
   priority = 1000,
   config = function()
-    require("kanagawa").setup({
-      theme = "wave",
-    })
-    vim.cmd([[colorscheme kanagawa]])
+    vim.cmd([[colorscheme melange]])
   end,
 }
