@@ -1,10 +1,9 @@
 return {
-  "mcchrish/zenbones.nvim",
-  dependencies = { "rktjmp/lush.nvim" },
-  lazy = false,
+  "EdenEast/nightfox.nvim",
+  event = "VimEnter",
   priority = 1000,
   config = function()
-    vim.g.zenbones_darkness = "warm"
-    vim.cmd([[colorscheme zenwritten]])
+    require("nightfox").setup({})
+    vim.cmd([[colorscheme carbonfox]])
   end,
 }

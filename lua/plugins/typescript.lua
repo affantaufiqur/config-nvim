@@ -25,7 +25,6 @@ return {
           includeInlayFunctionLikeReturnTypeHints = true,
           includeInlayEnumMemberValueHints = true,
           includeCompletionsForModuleExports = true,
-          importModuleSpecifierEnding = "js",
           quotePreference = "auto",
           -- autoImportFileExcludePatterns = { "node_modules/*", ".git/*" },
         },

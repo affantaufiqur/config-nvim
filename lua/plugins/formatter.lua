@@ -7,7 +7,14 @@ return {
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
       typescript = { "prettier" },
-      svelte = { "prettier" },
+      svelte = function()
+        local cwd = vim.fn.getcwd()
+        if cwd:match("bv") then
+          return {}
+        else
+          return { "prettier" }
+        end
+      end,
     },
   },
 }
