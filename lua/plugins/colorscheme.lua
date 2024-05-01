@@ -3,7 +3,11 @@ return {
   event = "VimEnter",
   priority = 1000,
   config = function()
-    require("nightfox").setup({})
+    require("nightfox").setup({
+      options = {
+        transparent = true,
+      },
+    })
     vim.cmd([[colorscheme carbonfox]])
   end,
 }
