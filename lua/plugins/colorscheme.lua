@@ -1,7 +1,12 @@
 return {
-  "savq/melange-nvim",
+  "ribru17/bamboo.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd([[colorscheme melange]])
+    require("bamboo").setup({
+      style = "multiplex",
+      transparent = true,
+    })
+    vim.cmd([[colorscheme bamboo]])
   end,
 }
