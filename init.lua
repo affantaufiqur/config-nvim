@@ -101,3 +101,11 @@ vim.api.nvim_create_user_command("UpdateStatusline", function()
 end, {})
 
 vim.api.nvim_set_keymap("n", "<leader>gr", ":UpdateStatusline<CR>", { noremap = true, silent = true })
+
+local statusline_group = vim.api.nvim_create_augroup("Statusline", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter", "VimEnter", "DirChanged" }, {
+  group = statusline_group,
+  callback = function()
+    vim.opt.statusline = statusline()
+  end,
+})
