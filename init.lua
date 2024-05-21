@@ -55,7 +55,7 @@ end
 local function statusline()
   local set_color_1 = "%#PmenuSel#"
   local branch = git_branch()
-  local set_color_2 = "%#LineNr#"
+  local set_color_2 = "%#PmenuSel#"
   local file_name = " %f"
   local modified = "%m"
   local align_right = "%="
