@@ -21,11 +21,17 @@ if vim.g.neovide then
 end
 
 local function git_branch()
-  local file = io.popen("git rev-parse --abbrev-ref HEAD 2>nul")
+  local os_name = io.popen("uname"):read("*l")
+  local file, branch
+  if os_name and os_name:lower() == "linux" then
+    file = io.popen("git rev-parse --abbrev-ref HEAD 2>/dev/null")
+  else -- Assume Windows
+    file = io.popen("git rev-parse --abbrev-ref HEAD 2>nul")
+  end
   if file then
-    local branch = file:read("*a")
+    branch = file:read("*l")
     file:close()
-    if string.len(branch) > 0 then
+    if branch and string.len(branch) > 0 then
       return string.gsub(branch, "[\r\n]+$", "")
     end
   end
@@ -34,18 +40,26 @@ end
 
 local function git_status()
   local status = {}
-  local file = io.popen("git status --porcelain 2>nul")
+  local os_name = io.popen("uname"):read("*l")
+  local file
+  if os_name and os_name:lower() == "linux" then
+    file = io.popen("git status --porcelain 2>/dev/null")
+  else -- Assume Windows
+    file = io.popen("git status --porcelain 2>nul")
+  end
   if file then
     local output = file:read("*a")
     file:close()
-    for line in output:gmatch("[^\r\n]+") do
-      local status_code = line:sub(1, 2)
-      if status_code == "??" then
-        status.untracked = (status.untracked or 0) + 1
-      elseif status_code == " M" or status_code == "M " then
-        status.modified = (status.modified or 0) + 1
-      elseif status_code == " D" or status_code == "D " then
-        status.deleted = (status.deleted or 0) + 1
+    if output then
+      for line in output:gmatch("[^\r\n]+") do
+        local status_code = line:sub(1, 2)
+        if status_code == "??" then
+          status.untracked = (status.untracked or 0) + 1
+        elseif status_code == " M" or status_code == "M " then
+          status.modified = (status.modified or 0) + 1
+        elseif status_code == " D" or status_code == "D " then
+          status.deleted = (status.deleted or 0) + 1
+        end
       end
     end
   end
@@ -53,9 +67,9 @@ local function git_status()
 end
 
 local function statusline()
-  local set_color_1 = "%#PmenuSel#"
+  local set_color_1 = "%#DiffDelete#"
   local branch = git_branch()
-  local set_color_2 = "%#PmenuSel#"
+  local set_color_2 = "%#Hint#"
   local file_name = " %f"
   local modified = "%m"
   local align_right = "%="
