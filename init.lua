@@ -1,6 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-vim.o.shell = "pwsh.exe"
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font"
   vim.g.neovide_theme = "auto"
