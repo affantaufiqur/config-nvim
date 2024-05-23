@@ -1,12 +1,9 @@
 return {
-  "ribru17/bamboo.nvim",
+  "Mofiqul/adwaita.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("bamboo").setup({
-      style = "multiplex",
-      transparent = true,
-    })
-    vim.cmd([[colorscheme bamboo]])
+    vim.g.adwaita_transparent = true
+    vim.cmd([[colorscheme adwaita]])
   end,
 }
