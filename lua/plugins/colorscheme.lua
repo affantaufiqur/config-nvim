@@ -1,9 +1,16 @@
 return {
-  "Mofiqul/adwaita.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.g.adwaita_transparent = true
-    vim.cmd([[colorscheme adwaita]])
-  end,
+  {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.cmd([[colorscheme lackluster-dark]])
+    end,
+  },
+  {
+    "Lazyvim/LazyVim",
+    opts = {
+      colorscheme = "lackluster",
+    },
+  },
 }
