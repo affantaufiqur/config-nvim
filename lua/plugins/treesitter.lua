@@ -20,5 +20,8 @@ return {
     highlight = {
       enable = false,
     },
+    illuminate = {
+      enable = false,
+    },
   },
 }
