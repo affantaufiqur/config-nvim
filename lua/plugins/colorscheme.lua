@@ -1,16 +1,16 @@
 return {
   {
-    "slugbyte/lackluster.nvim",
+    "mellow-theme/mellow.nvim",
     lazy = false,
     priority = 1000,
     init = function()
-      vim.cmd([[colorscheme lackluster-dark]])
+      vim.g.mellow_transparent = true
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "lackluster",
+      colorscheme = "mellow",
     },
   },
 }
