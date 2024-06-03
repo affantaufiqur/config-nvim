@@ -45,9 +45,9 @@ local function git_status()
 end
 
 local function statusline()
-  local set_color_1 = "%#DiffDelete#"
+  local set_color_1 = "%#PmenuSel#"
   local branch = git_branch()
-  local set_color_2 = "%#Hint#"
+  local set_color_2 = "%#PmenuSel#"
   local file_name = " %f"
   local modified = "%m"
   local align_right = "%="
@@ -71,7 +71,7 @@ local function statusline()
   local git_status_str = table.concat(git_status_components, " ")
 
   return string.format(
-    "%s %s %s%s%s%s%s%s%s%s%s",
+    "%s %s %s %s%s%s%s%s%s%s%s",
     set_color_1,
     branch,
     set_color_2,
