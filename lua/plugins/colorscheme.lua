@@ -1,16 +1,22 @@
 return {
   {
-    "mellow-theme/mellow.nvim",
+    "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
-    init = function()
-      vim.g.mellow_transparent = true
+    config = function()
+      require("cyberdream").setup({
+        transparent = true,
+        italic_comments = true,
+        hide_fillchars = true,
+        borderless_telescope = true,
+      })
+      vim.cmd([[colorscheme cyberdream]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "mellow",
+      colorscheme = "cyberdream",
     },
   },
 }
