@@ -1,16 +1,16 @@
 return {
   {
-    "Abstract-IDE/Abstract-cs",
+    "Tsuzat/NeoSolarized.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme abscs]])
+      vim.cmd([[colorscheme NeoSolarized]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "abscs",
+      colorscheme = "NeoSolarized",
     },
   },
 }
