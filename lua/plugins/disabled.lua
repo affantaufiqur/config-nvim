@@ -31,9 +31,4 @@ return {
     "catppuccin/nvim",
     enabled = false,
   },
-  -- {
-  -- required by neo-tree
-  --   "MunifTanjim/nui.nvim",
-  --   enabled = false,
-  -- },
 }
