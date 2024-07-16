@@ -1,28 +1,19 @@
 return {
   {
-    "slugbyte/lackluster.nvim",
+    "miikanissi/modus-themes.nvim",
     lazy = false,
     priority = 1000,
     init = function()
-      local lackluster = require("lackluster")
-      lackluster.setup({
-        tweak_syntax = {
-          comment = lackluster.color.orange,
-        },
-        tweak_background = {
-          normal = "none",
-          telescope = "none",
-          menu = lackluster.color.gray3,
-          popup = "default",
-        },
+      require("modus-themes").setup({
+        transparent = true,
       })
-      vim.cmd.colorscheme("lackluster-hack")
+      vim.cmd([[colorscheme modus]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "lackluster-hack",
+      colorscheme = "modus",
     },
   },
 }
