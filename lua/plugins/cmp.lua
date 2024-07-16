@@ -53,7 +53,6 @@ return {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
-        { name = "supermaven" },
       }, {
         { name = "buffer" },
       }),
@@ -61,10 +60,8 @@ return {
         format = lspkind.cmp_format({
           maxwidth = 50,
           ellipsis_char = "...",
-          mode = "symbol",
-          symbol_map = {
-            Supermaven = "",
-          },
+          mode = "symbol_text",
+          show_labelDetails = true,
         }),
       },
       experimental = {
