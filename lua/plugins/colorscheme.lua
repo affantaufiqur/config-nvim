@@ -1,19 +1,20 @@
 return {
   {
-    "miikanissi/modus-themes.nvim",
+    "0xstepit/flow.nvim",
     lazy = false,
     priority = 1000,
     init = function()
-      require("modus-themes").setup({
+      require("flow").setup({
         transparent = true,
+        fluo_color = "pink",
       })
-      vim.cmd([[colorscheme modus]])
+      vim.cmd([[colorscheme flow]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "modus",
+      colorscheme = "flow",
     },
   },
 }

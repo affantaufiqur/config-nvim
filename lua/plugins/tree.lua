@@ -8,6 +8,17 @@ return {
       use_libuv_file_watcher = false,
       follow_current_file = {
         enabled = true,
+        leave_dirs_open = true,
+      },
+      filtered_items = {
+        always_show = { ".env", ".prettierrc" },
+        always_show_by_pattern = { ".env", ".prettier" },
+      },
+    },
+    buffers = {
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = true,
       },
     },
   },

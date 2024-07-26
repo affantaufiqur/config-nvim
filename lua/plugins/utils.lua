@@ -59,10 +59,10 @@ return {
     event = "LazyFile",
     opts = {
       indent = {
-        char = " ",
+        char = "┊",
         tab_char = " ",
       },
-      scope = { enabled = false },
+      scope = { enabled = true, show_exact_scope = true },
       exclude = {
         filetypes = {
           "help",
@@ -90,5 +90,8 @@ return {
         },
       })
     end,
+  },
+  {
+    "eandrju/cellular-automaton.nvim",
   },
 }
