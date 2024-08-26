@@ -23,5 +23,8 @@ return {
     illuminate = {
       enable = false,
     },
+    incremental_selection = {
+      enable = false,
+    },
   },
 }
