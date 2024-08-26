@@ -1,20 +1,20 @@
 return {
   {
-    "0xstepit/flow.nvim",
+    "aliqyan-21/darkvoid.nvim",
     lazy = false,
     priority = 1000,
-    init = function()
-      require("flow").setup({
+    config = function()
+      require("darkvoid").setup({
         transparent = true,
-        fluo_color = "pink",
+        glow = true,
       })
-      vim.cmd([[colorscheme flow]])
+      vim.cmd.colorscheme("darkvoid")
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "flow",
+      colorscheme = "darkvoid",
     },
   },
 }
