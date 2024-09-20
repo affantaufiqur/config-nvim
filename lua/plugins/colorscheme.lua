@@ -1,20 +1,20 @@
 return {
   {
-    "aliqyan-21/darkvoid.nvim",
+    "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("darkvoid").setup({
+      require("solarized-osaka").setup({
         transparent = true,
-        glow = true,
+        terminal_colors = true,
       })
-      vim.cmd.colorscheme("darkvoid")
+      vim.cmd([[colorscheme solarized-osaka]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "darkvoid",
+      colorscheme = "solarized-osaka",
     },
   },
 }

@@ -45,9 +45,9 @@ local function git_status()
 end
 
 local function statusline()
-  local set_color_1 = "%#PmenuSel#"
+  local set_color_1 = "%#Hint#"
   local branch = git_branch()
-  local set_color_2 = "%#PmenuSel#"
+  local set_color_2 = "%#Hint#"
   local file_name = " %f"
   local modified = "%m"
   local align_right = "%="
