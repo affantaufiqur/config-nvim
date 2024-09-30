@@ -11,7 +11,7 @@ return {
         leave_dirs_open = true,
       },
       filtered_items = {
-        always_show = { ".env", ".prettierrc" },
+        always_show = { ".env", ".prettierrc", ".github" },
         always_show_by_pattern = { ".env", ".prettier" },
       },
     },
