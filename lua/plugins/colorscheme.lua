@@ -1,20 +1,17 @@
 return {
   {
-    "craftzdog/solarized-osaka.nvim",
+    "bluz71/vim-moonfly-colors",
     lazy = false,
     priority = 1000,
     config = function()
-      require("solarized-osaka").setup({
-        transparent = true,
-        terminal_colors = true,
-      })
-      vim.cmd([[colorscheme solarized-osaka]])
+      vim.g.moonflyTransparent = true
+      vim.cmd([[colorscheme moonfly]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "moonfly",
     },
   },
 }
