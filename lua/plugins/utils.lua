@@ -91,7 +91,4 @@ return {
       })
     end,
   },
-  {
-    "eandrju/cellular-automaton.nvim",
-  },
 }
