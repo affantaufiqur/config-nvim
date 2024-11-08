@@ -1,17 +1,19 @@
 return {
   {
-    "bluz71/vim-moonfly-colors",
+    "aliqyan-21/darkvoid.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.moonflyTransparent = true
-      vim.cmd([[colorscheme moonfly]])
+      require("darkvoid").setup({
+        transparent = true,
+      })
+      vim.cmd([[colorscheme darkvoid]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "moonfly",
+      colorscheme = "darkvoid",
     },
   },
 }
