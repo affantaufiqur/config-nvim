@@ -1,6 +1,6 @@
 return {
-  { "nvimdev/dashboard-nvim", enabled = false },
-  { "Exafunction/codeium.vim", enabled = false },
+  { "nvimdev/dashboard-nvim",    enabled = false },
+  { "Exafunction/codeium.vim",   enabled = false },
   { "nvim-lualine/lualine.nvim", enabled = false },
   {
     "rcarriga/nvim-notify",
@@ -31,4 +31,8 @@ return {
     "catppuccin/nvim",
     enabled = false,
   },
+  {
+    "supermaven-inc/supermaven-nvim",
+    enabled = false,
+  }
 }
