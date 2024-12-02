@@ -4,3 +4,9 @@
 
 vim.api.nvim_set_keymap("n", "a", "i", { noremap = true })
 vim.api.nvim_set_keymap("n", "i", "a", { noremap = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>cpo",
+  ":CopilotChatOpen<CR>",
+  { noremap = true, silent = true, desc = "Open copilot chat window" }
+)
