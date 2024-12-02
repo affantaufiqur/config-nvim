@@ -10,21 +10,20 @@ return {
           keymap = {
             accept = "<C-a>",
             next = "<C-j>",
-          }
-        }
+          },
+        },
       })
     end,
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
 
     dependencies = {
       { "zbirenbaum/copilot.lua" }, -- or zbirenbaum/copilot.lua
-      { "nvim-lua/plenary.nvim" },  -- for curl, log wrapper
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
     opts = {
-      models = "claude-3.5-sonnet"
+      models = "claude-3.5-sonnet",
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
