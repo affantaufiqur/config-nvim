@@ -23,7 +23,7 @@ return {
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
     opts = {
-      models = "claude-3.5-sonnet",
+      model = "claude-3.5-sonnet",
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
