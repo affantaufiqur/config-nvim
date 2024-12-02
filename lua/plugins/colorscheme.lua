@@ -1,19 +1,18 @@
 return {
   {
-    "aliqyan-21/darkvoid.nvim",
+    "zenbones-theme/zenbones.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("darkvoid").setup({
-        transparent = true,
-      })
-      vim.cmd([[colorscheme darkvoid]])
+      vim.g.zenbones_transparent_background = true
+      vim.g.zenbones_compat = 1
+      vim.cmd([[colorscheme zenbones]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "darkvoid",
+      colorscheme = "zenbones",
     },
   },
 }
