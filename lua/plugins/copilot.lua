@@ -24,6 +24,12 @@ return {
     },
     opts = {
       model = "claude-3.5-sonnet",
+      mappings = {
+        reset = {
+          normal = "<leader>cpr",
+          insert = "<leader>cpr",
+        },
+      },
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
