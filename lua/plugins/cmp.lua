@@ -64,11 +64,11 @@ return {
           show_labelDetails = true,
         }),
       },
-      experimental = {
-        ghost_text = {
-          hl_group = "CmpGhostText",
-        },
-      },
+      -- experimental = {
+      --   ghost_text = {
+      --     hl_group = "CmpGhostText",
+      --   },
+      -- },
       sorting = defaults.sorting,
     }
   end,
