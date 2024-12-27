@@ -91,5 +91,4 @@ return {
       })
     end,
   },
-  { "nvzone/showkeys", cmd = "ShowkeysToggle", opts = { position = "top-right" } },
 }

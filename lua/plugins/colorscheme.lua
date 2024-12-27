@@ -1,18 +1,16 @@
 return {
   {
-    "zenbones-theme/zenbones.nvim",
+    "mellow-theme/mellow.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.zenbones_transparent_background = true
-      vim.g.zenbones_compat = 1
-      vim.cmd([[colorscheme zenbones]])
+      vim.cmd([[colorscheme mello]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "zenbones",
+      colorscheme = "mellow",
     },
   },
 }
