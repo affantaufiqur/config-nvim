@@ -1,16 +1,16 @@
 return {
   {
-    "mellow-theme/mellow.nvim",
+    "ficcdaf/ashen.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme mello]])
+      vim.cmd([[colorscheme ashen]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "mellow",
+      colorscheme = "ashen",
     },
   },
 }
