@@ -1,16 +1,17 @@
 return {
   {
-    "ficcdaf/ashen.nvim",
+    "aliqyan-21/darkvoid.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme ashen]])
+      require("darkvoid").setup()
+      vim.cmd([[colorscheme darkvoid]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "ashen",
+      colorscheme = "darkvoid",
     },
   },
 }

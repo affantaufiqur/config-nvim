@@ -73,7 +73,7 @@ local function statusline()
   return string.format(
     "%s %s %s %s%s%s%s%s%s%s%s",
     set_color_1,
-    branch,
+    "[" .. branch .. "]",
     set_color_2,
     git_status_str,
     file_name,

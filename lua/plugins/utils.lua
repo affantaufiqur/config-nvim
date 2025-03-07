@@ -91,4 +91,8 @@ return {
       })
     end,
   },
+  {
+    "rescript-lang/vim-rescript",
+    ft = "rescript",
+  },
 }
