@@ -1,11 +1,12 @@
 local function git_branch()
   local os_name = io.popen("uname"):read("*l")
   local file, branch
-  if os_name and os_name:lower() == "linux" then
+  if os_name and (os_name:lower() == "linux" or os_name:lower() == "darwin") then
     file = io.popen("git rev-parse --abbrev-ref HEAD 2>/dev/null")
   else -- Assume Windows
     file = io.popen("git rev-parse --abbrev-ref HEAD 2>nul")
   end
+
   if file then
     branch = file:read("*l")
     file:close()
@@ -20,7 +21,7 @@ local function git_status()
   local status = {}
   local os_name = io.popen("uname"):read("*l")
   local file
-  if os_name and os_name:lower() == "linux" then
+  if os_name and (os_name:lower() == "linux" or os_name:lower()) == "darwin" then
     file = io.popen("git status --porcelain 2>/dev/null")
   else -- Assume Windows
     file = io.popen("git status --porcelain 2>nul")
