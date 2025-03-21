@@ -1,19 +1,19 @@
 return {
   {
-    "armannikoyan/rusty",
+    "aliqyan-21/darkvoid.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("rusty").setup({
+      require("darkvoid").setup({
         transparent = true,
       })
-      vim.cmd([[colorscheme rusty]])
+      vim.cmd([[colorscheme darkvoid]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "rusty",
+      colorscheme = "darkvoid",
     },
   },
 }
