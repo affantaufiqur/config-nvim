@@ -1,19 +1,16 @@
 return {
   {
-    "aliqyan-21/darkvoid.nvim",
+    "affantaufiqur/mana",
     lazy = false,
     priority = 1000,
     config = function()
-      require("darkvoid").setup({
-        transparent = true,
-      })
-      vim.cmd([[colorscheme darkvoid]])
+      vim.cmd([[colorscheme mana]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "darkvoid",
+      colorscheme = "mana",
     },
   },
 }
