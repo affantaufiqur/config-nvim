@@ -18,7 +18,7 @@ return {
       "yaml",
     },
     highlight = {
-      enable = false,
+      enable = true,
     },
     illuminate = {
       enable = false,
