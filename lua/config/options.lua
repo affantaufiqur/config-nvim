@@ -6,3 +6,5 @@ vim.opt.termguicolors = true
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.showmode = true
+vim.opt.conceallevel = 0
+vim.opt.concealcursor = ""
