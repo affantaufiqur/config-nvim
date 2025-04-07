@@ -16,6 +16,29 @@ return {
     end,
   },
   {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    version = false,
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "zbirenbaum/copilot.lua",
+    },
+    config = function()
+      require("avante").setup({
+        provider = "copilot",
+        auto_suggestions_provider = "claude",
+        copilot = {
+          model = "claude-3.7-sonnet",
+          temperature = 0.1,
+        },
+      })
+    end,
+  },
+  {
     "CopilotC-Nvim/CopilotChat.nvim",
 
     dependencies = {
