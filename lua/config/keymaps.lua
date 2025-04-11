@@ -2,8 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.api.nvim_set_keymap("n", "a", "i", { noremap = true })
-vim.api.nvim_set_keymap("n", "i", "a", { noremap = true })
 vim.api.nvim_set_keymap(
   "n",
   "<leader>cpo",
