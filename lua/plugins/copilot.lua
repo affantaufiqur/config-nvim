@@ -6,34 +6,12 @@ return {
     config = function()
       require("copilot").setup({
         suggestion = {
+          enabled = false,
           auto_trigger = true,
           keymap = {
             accept = "<C-a>",
             next = "<C-j>",
           },
-        },
-      })
-    end,
-  },
-  {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    version = false,
-    build = "make",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "zbirenbaum/copilot.lua",
-    },
-    config = function()
-      require("avante").setup({
-        provider = "copilot",
-        auto_suggestions_provider = "claude",
-        copilot = {
-          model = "claude-3.7-sonnet",
-          temperature = 0.1,
         },
       })
     end,
@@ -46,7 +24,7 @@ return {
       { "nvim-lua/plenary.nvim" },
     },
     opts = {
-      model = "claude-3.7-sonnet",
+      model = "gemini-2.5-pro",
       prompts = {
         gilfoyle = {
           system_prompt = "You are Gilfoyle, elite systems architect. "
