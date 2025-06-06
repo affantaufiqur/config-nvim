@@ -1,9 +1,22 @@
 return {
-  "saghen/blink.cmp",
-  opts = {
-    keymap = {
-      preset = "enter",
-      ["<S-CR>"] = { "select_and_accept" },
+    'Saghen/blink.cmp',
+    dependencies = 'rafamadriz/friendly-snippets',
+    version = '*',
+    opts = {
+        keymap = { preset = 'enter' },
+
+        appearance = {
+            use_nvim_cmp_as_default = true,
+            nerd_font_variant = 'mono'
+        },
+
+        sources = {
+            default = { 'lsp', 'path', 'snippets', 'buffer' },
+            -- optionally disable cmdline completions
+            -- cmdline = {},
+        },
+
+        signature = { enabled = true }
     },
-  },
+    opts_extend = { "sources.default" }
 }
