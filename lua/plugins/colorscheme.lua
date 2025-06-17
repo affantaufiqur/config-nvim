@@ -1,19 +1,19 @@
 return {
   {
-    "affantaufiqur/mana",
+    "datsfilipe/vesper.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("mana").setup({
+      require("vesper").setup({
         transparent = true,
       })
-      vim.cmd([[colorscheme mana]])
+      vim.cmd([[colorscheme vesper]])
     end,
   },
   {
     "Lazyvim/LazyVim",
     opts = {
-      colorscheme = "mana",
+      colorscheme = "vesper",
     },
   },
 }

@@ -6,7 +6,7 @@ return {
     config = function()
       require("copilot").setup({
         suggestion = {
-          enabled = false,
+          enabled = true,
           auto_trigger = true,
           keymap = {
             accept = "<C-a>",
@@ -24,7 +24,7 @@ return {
       { "nvim-lua/plenary.nvim" },
     },
     opts = {
-      model = "gemini-2.5-pro",
+      model = "claude-sonnet-4",
       prompts = {
         gilfoyle = {
           system_prompt = "You are Gilfoyle, elite systems architect. "
