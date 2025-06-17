@@ -21,6 +21,12 @@ return {
                     require('telescope.themes').get_dropdown(),
                 },
             },
+            defaults = {
+                layout_strategy = "flex",
+                layout_config = { prompt_position = "top" },
+                sorting_strategy = "ascending",
+                winblend = 0,
+            }
         }
 
         -- Enable Telescope extensions if they are installed
