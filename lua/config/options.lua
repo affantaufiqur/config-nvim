@@ -8,3 +8,4 @@ vim.opt.expandtab = true
 vim.opt.showmode = true
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
+vim.opt.foldenable = false
