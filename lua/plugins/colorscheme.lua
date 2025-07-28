@@ -1,19 +1,10 @@
 return {
   {
-    "datsfilipe/vesper.nvim",
+    "aliqyan-21/darkvoid.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("vesper").setup({
-        transparent = true,
-      })
-      vim.cmd([[colorscheme vesper]])
+      vim.cmd([[colorscheme darkvoid]])
     end,
-  },
-  {
-    "Lazyvim/LazyVim",
-    opts = {
-      colorscheme = "vesper",
-    },
   },
 }

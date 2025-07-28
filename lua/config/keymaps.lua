@@ -12,4 +12,4 @@ vim.api.nvim_set_keymap(
 local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+vim.keymap.set("n", "<leader>sB", builtin.buffers, { desc = "[s] Find existing [B]uffers" })

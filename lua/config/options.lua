@@ -9,3 +9,6 @@ vim.opt.showmode = true
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 vim.opt.foldenable = false
+
+-- https://github.com/oven-sh/bun/issues/8520
+vim.opt.backupcopy = "yes"
