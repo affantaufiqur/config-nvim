@@ -1,10 +1,13 @@
 return {
   {
-    "aliqyan-21/darkvoid.nvim",
+    "miikanissi/modus-themes.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme darkvoid]])
+      require("modus-themes").setup({
+        style = "modus_operandi",
+      })
+      vim.cmd([[colorscheme modus]])
     end,
   },
 }

@@ -3,12 +3,12 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "prettier", stop_after_first = true },
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
       typescript = { "prettier" },
-      svelte = { "prettierd", "prettier", stop_after_first = true },
-      astro = { "prettierd", "prettier", stop_after_first = true },
+      svelte = { "prettier", stop_after_first = true },
+      astro = { "prettier", stop_after_first = true },
     },
   },
 }
