@@ -1,13 +1,10 @@
 return {
   {
-    "miikanissi/modus-themes.nvim",
+    "yorickpeterse/nvim-grey",
     lazy = false,
     priority = 1000,
     config = function()
-      require("modus-themes").setup({
-        style = "modus_operandi",
-      })
-      vim.cmd([[colorscheme modus]])
+      vim.cmd([[colorscheme grey]])
     end,
   },
 }
