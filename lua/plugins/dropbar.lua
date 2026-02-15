@@ -1,7 +1,7 @@
 return {
   "Bekaboo/dropbar.nvim",
   dependencies = {
-    "vigoux/fff.nvim",
+    "dmtrKovalenko/fff.nvim",
   },
   opts = {
     icons = {

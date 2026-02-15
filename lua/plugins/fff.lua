@@ -1,9 +1,30 @@
 return {
-  "vigoux/fff.nvim",
-  keys = {
-    { "<leader>sf", "<cmd>FTFind<cr>", desc = "[S]earch [F]iles" },
-    { "<leader>sB", "<cmd>FTBuffers<cr>", desc = "[s] Find existing [B]uffers" },
-    { "<leader>fp", "<cmd>FTFind root<cr>", desc = "Find Plugin File" },
+  "dmtrKovalenko/fff.nvim",
+  build = function()
+    require("fff.download").download_or_build_binary()
+  end,
+  opts = {
+    debug = {
+      enabled = true,
+      show_scores = true,
+    },
   },
-  opts = {},
+  lazy = false,
+  keys = {
+    {
+      "<leader>sf",
+      function() require("fff").find_files() end,
+      desc = "[S]earch [F]iles",
+    },
+    {
+      "<leader>sB",
+      function() require("fff").buffers() end,
+      desc = "[s] Find existing [B]uffers",
+    },
+    {
+      "<leader>fp",
+      function() require("fff").find_files({ cwd = require("lazy.core.config").options.root }) end,
+      desc = "Find Plugin File",
+    },
+  },
 }
