@@ -24,7 +24,7 @@ return {
     enabled = false,
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     enabled = false,
   },
   {
