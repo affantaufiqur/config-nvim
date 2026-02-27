@@ -13,18 +13,31 @@ return {
   keys = {
     {
       "<leader>sf",
-      function() require("fff").find_files() end,
+      function()
+        require("fff").find_files()
+      end,
       desc = "[S]earch [F]iles",
     },
     {
       "<leader>sB",
-      function() require("fff").buffers() end,
+      function()
+        require("fff").buffers()
+      end,
       desc = "[s] Find existing [B]uffers",
     },
     {
       "<leader>fp",
-      function() require("fff").find_files({ cwd = require("lazy.core.config").options.root }) end,
+      function()
+        require("fff").find_files({ cwd = require("lazy.core.config").options.root })
+      end,
       desc = "Find Plugin File",
+    },
+    {
+      "<leader><space>",
+      function()
+        require("fff").find_in_git_root()
+      end,
+      desc = "Find files in git root",
     },
   },
 }
