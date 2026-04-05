@@ -9,9 +9,6 @@ vim.pack.add({
   "https://github.com/saghen/blink.cmp",
   "https://github.com/rafamadriz/friendly-snippets",
 
-  -- Colorscheme
-  "https://github.com/zenbones-theme/zenbones.nvim",
-
   -- Git
   "https://github.com/tpope/vim-fugitive",
   "https://github.com/lewis6991/gitsigns.nvim",
@@ -59,10 +56,7 @@ vim.pack.add({
 -- ============================================
 -- Colorscheme
 -- ============================================
-vim.g.zenbones_compat = 1
-vim.g.background = "light"
-vim.cmd([[colorscheme zenbones]])
-vim.cmd([[source ~/.config/nvim/custom.vim]])
+vim.cmd([[source ~/.config/nvim/theme.vim]])
 
 -- ============================================
 -- Plugin Configurations
