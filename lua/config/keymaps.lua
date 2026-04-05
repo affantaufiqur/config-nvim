@@ -29,6 +29,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { buffer = ev.buf, desc = 'Prev Diagnostic' })
   end,
 })
+
+-- Window management
+vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = 'Split window [V]ertically' })
+vim.keymap.set('n', '<leader>w-', '<C-w>s', { desc = 'Split window horizontally' })
+vim.keymap.set('n', '<leader>wd', '<C-w>c', { desc = '[W]indow [D]elete (close)' })
+
+-- Window navigation with Ctrl+hjkl
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to bottom window' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to top window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right window' })
 vim.keymap.set('n', '<leader>ff', function() require('fff').find_files() end, { desc = 'Find [F]iles' })
 vim.keymap.set('n', '<leader>fs', function() require('fff').scan_files() end, { desc = '[F]ile [S]can' })
 vim.keymap.set('n', '<leader>fr', function() require('fff').refresh_git_status() end, { desc = '[F]iles [R]efresh git status' })
@@ -61,5 +72,10 @@ vim.api.nvim_set_keymap(
   ":Neotree reveal<CR>",
   { noremap = true, silent = true, desc = "Reveal current file in explorer" }
 )
+
+-- Bufdel.nvim (buffer deletion)
+vim.keymap.set('n', '<leader>bd', '<cmd>Bdelete<cr>', { desc = '[B]uffer [D]elete' })
+vim.keymap.set('n', '<leader>bD', '<cmd>Bdelete!<cr>', { desc = '[B]uffer force [D]elete' })
+vim.keymap.set('n', '<leader>bw', '<cmd>Bwipeout<cr>', { desc = '[B]uffer [W]ipeout' })
 
 

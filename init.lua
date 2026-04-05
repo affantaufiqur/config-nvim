@@ -50,6 +50,9 @@ vim.pack.add({
 
   -- Time tracking
   "https://github.com/wakatime/vim-wakatime",
+
+  -- Buffer management
+  "https://github.com/wsdjeg/bufdel.nvim",
 })
 
 -- ============================================
