@@ -43,9 +43,10 @@ vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
 
   -- Statusline
-  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/nvim-mini/mini.statusline",
 
   -- Which-key (keymap helper)
+  "https://github.com/folke/which-key.nvim",
   "https://github.com/folke/which-key.nvim",
 
   -- Time tracking
@@ -244,6 +245,15 @@ require("mini.indentscope").setup({
   options = { try_as_border = true },
 })
 
+-- Mini.statusline
+require("mini.statusline").setup({
+  content = {
+    active = nil,
+    inactive = nil,
+  },
+  use_icons = true,
+})
+
 -- Disable indentscope for specific filetypes
 vim.api.nvim_create_autocmd("FileType", {
   pattern = {
@@ -381,13 +391,6 @@ require("fidget").setup({
     display = {
       render_limit = 10,
     },
-  },
-})
-
--- Lualine
-require("lualine").setup({
-  options = {
-    theme = "zenbones",
   },
 })
 
