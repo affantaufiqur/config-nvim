@@ -27,6 +27,7 @@ vim.pack.add({
   "https://github.com/jake-stewart/multicursor.nvim",
   "https://github.com/jinh0/eyeliner.nvim",
   "https://github.com/vuki656/package-info.nvim",
+  "https://github.com/windwp/nvim-ts-autotag",
 
   -- Search & Navigation
   "https://github.com/mbbill/undotree",
@@ -333,6 +334,9 @@ require("eyeliner").setup({
 
 -- Package-info (package.json helper)
 require("package-info").setup({})
+
+-- nvim-ts-autotag (auto close/rename HTML tags)
+require("nvim-ts-autotag").setup({})
 
 -- Undotree
 vim.g.undotree_WindowLayout = 3
