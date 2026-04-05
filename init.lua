@@ -12,6 +12,8 @@ vim.pack.add({
   'https://github.com/mason-org/mason.nvim',
   'https://github.com/mason-org/mason-lspconfig.nvim',
   'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/saghen/blink.cmp',
+  'https://github.com/rafamadriz/friendly-snippets',
   
   -- Colorscheme
   'https://github.com/zenbones-theme/zenbones.nvim',
@@ -97,12 +99,16 @@ require('nvim-treesitter').setup({
 require('conform').setup({
   formatters_by_ft = {
     lua = { "stylua" },
-    javascript = { "prettier", stop_after_first = true },
-    javascriptreact = { "prettier" },
-    typescriptreact = { "prettier" },
-    typescript = { "prettier" },
-    svelte = { "prettier", stop_after_first = true },
-    astro = { "prettier", stop_after_first = true },
+    javascript = { "prettierd", "prettier", stop_after_first = true },
+    javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+    typescript = { "prettierd", "prettier", stop_after_first = true },
+    typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+    svelte = { "prettierd", "prettier", stop_after_first = true },
+    astro = { "prettierd", "prettier", stop_after_first = true },
+  },
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_format_fallback = true,
   },
 })
 
@@ -118,13 +124,46 @@ require('mason').setup({
 
 -- Mason-LSPConfig and LSP setup
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = { 'ts_ls' },
   automatic_installation = false,
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
+    -- Custom ts_ls configuration
+    ['ts_ls'] = function()
+      require('lspconfig').ts_ls.setup({
+        init_options = {
+          hostInfo = 'neovim',
+          preferences = {
+            importModuleSpecifierPreference = 'relative',
+          },
+        },
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = 'all',
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+            },
+          },
+        },
+      })
+    end,
   },
+})
+
+-- Blink.cmp (completion)
+require('blink.cmp').setup({
+  keymap = { preset = 'enter' },
+  appearance = {
+    nerd_font_variant = 'mono'
+  },
+  completion = { documentation = { auto_show = false } },
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+  fuzzy = { implementation = "lua" }
 })
 
 -- Disable inlay hints
