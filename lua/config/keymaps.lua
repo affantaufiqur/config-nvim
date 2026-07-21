@@ -30,6 +30,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+-- Open buffers (sorted by most recently used)
+vim.keymap.set("n", "<leader>,", function()
+  Snacks.picker.buffers({ sort_lastused = true })
+end, { desc = "Buffers" })
+
 -- Window management
 vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window [V]ertically" })
 vim.keymap.set("n", "<leader>w-", "<C-w>s", { desc = "Split window horizontally" })

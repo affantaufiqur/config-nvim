@@ -14,3 +14,6 @@ vim.opt.number = true
 
 -- https://github.com/oven-sh/bun/issues/8520
 vim.opt.backupcopy = "yes"
+
+-- System clipboard integration
+vim.opt.clipboard = "unnamedplus"

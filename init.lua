@@ -36,7 +36,6 @@ vim.pack.add({
 
   -- LSP / Completion
   "https://github.com/zbirenbaum/copilot.lua",
-  "https://github.com/olimorris/codecompanion.nvim",
   "https://github.com/j-hui/fidget.nvim",
   "https://github.com/nvim-lua/plenary.nvim",
 
@@ -111,6 +110,22 @@ require("gitsigns").setup({
     row = 0,
     col = 1,
   },
+  on_attach = function(bufnr)
+    local gs = require("gitsigns")
+
+    local function map(mode, lhs, rhs, desc)
+      vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc, silent = true })
+    end
+
+    map("n", "<leader>ghs", gs.stage_hunk, "Git stage hunk")
+    map("n", "<leader>ghr", gs.reset_hunk, "Git reset hunk")
+    map("v", "<leader>ghs", function()
+      gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+    end, "Git stage hunk")
+    map("v", "<leader>ghr", function()
+      gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+    end, "Git reset hunk")
+  end,
 })
 
 -- Snacks.nvim
@@ -120,6 +135,7 @@ require("snacks").setup({
   indent = { enabled = true },
   input = { enabled = true },
   notifier = { enabled = false },
+  picker = { enabled = true },
   quickfile = { enabled = true },
   scroll = { enabled = false },
   statuscolumn = { enabled = true },
@@ -154,6 +170,8 @@ require("nvim-treesitter").setup({
 require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
+    json = { "prettierd", "prettier", stop_after_first = true },
+    jsonc = { "prettierd", "prettier", stop_after_first = true },
     javascript = { "prettierd", "prettier", stop_after_first = true },
     javascriptreact = { "prettierd", "prettier", stop_after_first = true },
     typescript = { "prettierd", "prettier", stop_after_first = true },
@@ -369,16 +387,6 @@ require("copilot").setup({
     keymap = {
       accept = "<C-a>",
       next = "<C-j>",
-    },
-  },
-})
-
--- CodeCompanion
-require("codecompanion").setup({
-  strategies = {
-    chat = {
-      adapter = "copilot",
-      model = "claude-sonnet-4",
     },
   },
 })
